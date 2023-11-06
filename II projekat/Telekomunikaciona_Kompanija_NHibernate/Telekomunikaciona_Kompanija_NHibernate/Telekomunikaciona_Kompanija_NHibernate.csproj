@@ -1,0 +1,684 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D8FA37F5-A912-4429-B9C6-49B8BC16CA4D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Telekomunikaciona_Kompanija_NHibernate</RootNamespace>
+    <AssemblyName>Telekomunikaciona_Kompanija_NHibernate</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr3.Runtime.3.5.1\lib\net40-client\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8aa435e3cb308880, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentNHibernate.3.2.0\lib\net461\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.5\lib\net461\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=5.4.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.5.4.2\lib\net48\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.21.10.0\lib\net462\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq.EagerFetching, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.EagerFetching.2.2.0\lib\net45\Remotion.Linq.EagerFetching.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.6.0.1\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataLayer.cs" />
+    <Compile Include="DTOManager.cs" />
+    <Compile Include="DTOmanagerM.cs" />
+    <Compile Include="DTOs.cs" />
+    <Compile Include="DTOsM.cs" />
+    <Compile Include="Entiteti\BrojTelefona.cs" />
+    <Compile Include="Entiteti\DodatniPaketKanala.cs" />
+    <Compile Include="Entiteti\FlataRate.cs" />
+    <Compile Include="Entiteti\FlatRate.cs" />
+    <Compile Include="Entiteti\Glavna_stanica.cs" />
+    <Compile Include="Entiteti\Internet.cs" />
+    <Compile Include="Entiteti\Komunikacioni_cvor.cs" />
+    <Compile Include="Entiteti\Korisnik.cs" />
+    <Compile Include="Entiteti\Koristi.cs" />
+    <Compile Include="Entiteti\OstvareniProtok.cs" />
+    <Compile Include="Entiteti\Placanje.cs" />
+    <Compile Include="Entiteti\Pravna_lica.cs" />
+    <Compile Include="Entiteti\StatickaAdresa.cs" />
+    <Compile Include="Entiteti\Telefon.cs" />
+    <Compile Include="Entiteti\Telefonija.cs" />
+    <Compile Include="Entiteti\Televizija.cs" />
+    <Compile Include="Entiteti\Uredjaj.cs" />
+    <Compile Include="Entiteti\Usluga.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DetaljiFlatRateForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DetaljiFlatRateForma.Designer.cs">
+      <DependentUpon>DetaljiFlatRateForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DetaljiInternetForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DetaljiInternetForma.Designer.cs">
+      <DependentUpon>DetaljiInternetForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DetaljiOFizickomLicu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DetaljiOFizickomLicu.Designer.cs">
+      <DependentUpon>DetaljiOFizickomLicu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DetaljiOPravnomLicu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DetaljiOPravnomLicu.Designer.cs">
+      <DependentUpon>DetaljiOPravnomLicu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DetaljiOstvareniPtotokForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DetaljiOstvareniPtotokForma.Designer.cs">
+      <DependentUpon>DetaljiOstvareniPtotokForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DetaljiOUredjajuGS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DetaljiOUredjajuGS.Designer.cs">
+      <DependentUpon>DetaljiOUredjajuGS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DetaljiOUredjajuHub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DetaljiOUredjajuHub.Designer.cs">
+      <DependentUpon>DetaljiOUredjajuHub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DetaljiOUredjajuKomCvor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DetaljiOUredjajuKomCvor.Designer.cs">
+      <DependentUpon>DetaljiOUredjajuKomCvor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DetaljiTelefonijaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DetaljiTelefonijaForma.Designer.cs">
+      <DependentUpon>DetaljiTelefonijaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DetaljiTelevizijaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DetaljiTelevizijaForma.Designer.cs">
+      <DependentUpon>DetaljiTelevizijaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DodajDodatniPaketForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajDodatniPaketForma.Designer.cs">
+      <DependentUpon>DodajDodatniPaketForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DodajInternetForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajInternetForma.Designer.cs">
+      <DependentUpon>DodajInternetForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DodajKorisnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajKorisnika.Designer.cs">
+      <DependentUpon>DodajKorisnika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DodajPlacanjeForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajPlacanjeForma.Designer.cs">
+      <DependentUpon>DodajPlacanjeForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DodajTelefonijuForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajTelefonijuForma.Designer.cs">
+      <DependentUpon>DodajTelefonijuForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DodajTelevizijuForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajTelevizijuForma.Designer.cs">
+      <DependentUpon>DodajTelevizijuForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DodajUredjaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajUredjaj.Designer.cs">
+      <DependentUpon>DodajUredjaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\InternetForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\InternetForma.Designer.cs">
+      <DependentUpon>InternetForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniDetaljeFlatRateForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniDetaljeFlatRateForma.Designer.cs">
+      <DependentUpon>IzmeniDetaljeFlatRateForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniDetaljeOstvareniProtok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniDetaljeOstvareniProtok.Designer.cs">
+      <DependentUpon>IzmeniDetaljeOstvareniProtok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniDodatniPaketForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniDodatniPaketForma.Designer.cs">
+      <DependentUpon>IzmeniDodatniPaketForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniInternetForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniInternetForma.Designer.cs">
+      <DependentUpon>IzmeniInternetForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniKorisnikaFizickoLice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniKorisnikaFizickoLice.Designer.cs">
+      <DependentUpon>IzmeniKorisnikaFizickoLice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniKorisnikaPravnoLice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniKorisnikaPravnoLice.Designer.cs">
+      <DependentUpon>IzmeniKorisnikaPravnoLice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniTelefonijuForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniTelefonijuForma.Designer.cs">
+      <DependentUpon>IzmeniTelefonijuForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniTelevizijuForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniTelevizijuForma.Designer.cs">
+      <DependentUpon>IzmeniTelevizijuForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniUredjajGlavnaStanica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniUredjajGlavnaStanica.Designer.cs">
+      <DependentUpon>IzmeniUredjajGlavnaStanica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniUredjajHub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniUredjajHub.Designer.cs">
+      <DependentUpon>IzmeniUredjajHub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniUredjajKomunikacioniCvor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniUredjajKomunikacioniCvor.Designer.cs">
+      <DependentUpon>IzmeniUredjajKomunikacioniCvor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Korisnici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Korisnici.Designer.cs">
+      <DependentUpon>Korisnici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PlacanjeForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PlacanjeForma.Designer.cs">
+      <DependentUpon>PlacanjeForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Pocetna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Pocetna.Designer.cs">
+      <DependentUpon>Pocetna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PotvdraBrisanjaDodatnogPaketaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PotvdraBrisanjaDodatnogPaketaForma.Designer.cs">
+      <DependentUpon>PotvdraBrisanjaDodatnogPaketaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PotvrdiBrisanjeInternetaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PotvrdiBrisanjeInternetaForma.Designer.cs">
+      <DependentUpon>PotvrdiBrisanjeInternetaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PotvrdiBrisanjeKorisnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PotvrdiBrisanjeKorisnika.Designer.cs">
+      <DependentUpon>PotvrdiBrisanjeKorisnika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PotvrdiBrisanjePlacanjaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PotvrdiBrisanjePlacanjaForma.Designer.cs">
+      <DependentUpon>PotvrdiBrisanjePlacanjaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PotvrdiBrisanjeTelefonijeForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PotvrdiBrisanjeTelefonijeForma.Designer.cs">
+      <DependentUpon>PotvrdiBrisanjeTelefonijeForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PotvrdiBrisanjeTelevizijeForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PotvrdiBrisanjeTelevizijeForma.Designer.cs">
+      <DependentUpon>PotvrdiBrisanjeTelevizijeForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PotvrdiBrisanjeUredjaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PotvrdiBrisanjeUredjaja.Designer.cs">
+      <DependentUpon>PotvrdiBrisanjeUredjaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PregledDodatnihPaketaTelevizijeForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PregledDodatnihPaketaTelevizijeForma.Designer.cs">
+      <DependentUpon>PregledDodatnihPaketaTelevizijeForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\TelefonijaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\TelefonijaForma.Designer.cs">
+      <DependentUpon>TelefonijaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\TelevizijaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\TelevizijaForma.Designer.cs">
+      <DependentUpon>TelevizijaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Uredjaji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Uredjaji.Designer.cs">
+      <DependentUpon>Uredjaji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Usluga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Usluga.Designer.cs">
+      <DependentUpon>Usluga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ZaPromenuKomCvora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ZaPromenuKomCvora.Designer.cs">
+      <DependentUpon>ZaPromenuKomCvora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ZaPromenuStanice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ZaPromenuStanice.Designer.cs">
+      <DependentUpon>ZaPromenuStanice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapiranja\BrojTelefonaMapiranja.cs" />
+    <Compile Include="Mapiranja\DodatniPaketKanalaMapiranja.cs" />
+    <Compile Include="Mapiranja\FizickaLicaMapiranja.cs" />
+    <Compile Include="Mapiranja\FlateRateMapiranja.cs" />
+    <Compile Include="Mapiranja\FlatRateMapiranja.cs" />
+    <Compile Include="Mapiranja\GlavnaStanicaMapiranje.cs" />
+    <Compile Include="Mapiranja\InternetMapiranja.cs" />
+    <Compile Include="Mapiranja\KomunikacioniCvorMapiranje.cs" />
+    <Compile Include="Mapiranja\KorisnikMapiranja.cs" />
+    <Compile Include="Mapiranja\KoristiMapiranja.cs" />
+    <Compile Include="Mapiranja\OstvareniProtokMapiranje.cs" />
+    <Compile Include="Mapiranja\PlacanjeMapiranja.cs" />
+    <Compile Include="Mapiranja\PlacanjeMapiranje.cs" />
+    <Compile Include="Mapiranja\PravnaLicaMapiranja.cs" />
+    <Compile Include="Mapiranja\StatickaAdresaMapiranja.cs" />
+    <Compile Include="Mapiranja\TelefonijaMapiranja.cs" />
+    <Compile Include="Mapiranja\TelefonMapiranja.cs" />
+    <Compile Include="Mapiranja\TelevizijaMapiranja.cs" />
+    <Compile Include="Mapiranja\UredjajMapiranja.cs" />
+    <Compile Include="Mapiranja\UslugaMapiranje.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DetaljiFlatRateForma.resx">
+      <DependentUpon>DetaljiFlatRateForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DetaljiInternetForma.resx">
+      <DependentUpon>DetaljiInternetForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DetaljiOFizickomLicu.resx">
+      <DependentUpon>DetaljiOFizickomLicu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DetaljiOPravnomLicu.resx">
+      <DependentUpon>DetaljiOPravnomLicu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DetaljiOstvareniPtotokForma.resx">
+      <DependentUpon>DetaljiOstvareniPtotokForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DetaljiOUredjajuGS.resx">
+      <DependentUpon>DetaljiOUredjajuGS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DetaljiOUredjajuHub.resx">
+      <DependentUpon>DetaljiOUredjajuHub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DetaljiOUredjajuKomCvor.resx">
+      <DependentUpon>DetaljiOUredjajuKomCvor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DetaljiTelefonijaForma.resx">
+      <DependentUpon>DetaljiTelefonijaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DetaljiTelevizijaForma.resx">
+      <DependentUpon>DetaljiTelevizijaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajDodatniPaketForma.resx">
+      <DependentUpon>DodajDodatniPaketForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajInternetForma.resx">
+      <DependentUpon>DodajInternetForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajKorisnika.resx">
+      <DependentUpon>DodajKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajPlacanjeForma.resx">
+      <DependentUpon>DodajPlacanjeForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajTelefonijuForma.resx">
+      <DependentUpon>DodajTelefonijuForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajTelevizijuForma.resx">
+      <DependentUpon>DodajTelevizijuForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajUredjaj.resx">
+      <DependentUpon>DodajUredjaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\InternetForma.resx">
+      <DependentUpon>InternetForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniDetaljeFlatRateForma.resx">
+      <DependentUpon>IzmeniDetaljeFlatRateForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniDetaljeOstvareniProtok.resx">
+      <DependentUpon>IzmeniDetaljeOstvareniProtok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniDodatniPaketForma.resx">
+      <DependentUpon>IzmeniDodatniPaketForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniInternetForma.resx">
+      <DependentUpon>IzmeniInternetForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniKorisnikaFizickoLice.resx">
+      <DependentUpon>IzmeniKorisnikaFizickoLice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniKorisnikaPravnoLice.resx">
+      <DependentUpon>IzmeniKorisnikaPravnoLice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniTelefonijuForma.resx">
+      <DependentUpon>IzmeniTelefonijuForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniTelevizijuForma.resx">
+      <DependentUpon>IzmeniTelevizijuForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniUredjajGlavnaStanica.resx">
+      <DependentUpon>IzmeniUredjajGlavnaStanica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniUredjajHub.resx">
+      <DependentUpon>IzmeniUredjajHub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniUredjajKomunikacioniCvor.resx">
+      <DependentUpon>IzmeniUredjajKomunikacioniCvor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Korisnici.resx">
+      <DependentUpon>Korisnici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PlacanjeForma.resx">
+      <DependentUpon>PlacanjeForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Pocetna.resx">
+      <DependentUpon>Pocetna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PotvdraBrisanjaDodatnogPaketaForma.resx">
+      <DependentUpon>PotvdraBrisanjaDodatnogPaketaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PotvrdiBrisanjeInternetaForma.resx">
+      <DependentUpon>PotvrdiBrisanjeInternetaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PotvrdiBrisanjeKorisnika.resx">
+      <DependentUpon>PotvrdiBrisanjeKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PotvrdiBrisanjePlacanjaForma.resx">
+      <DependentUpon>PotvrdiBrisanjePlacanjaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PotvrdiBrisanjeTelefonijeForma.resx">
+      <DependentUpon>PotvrdiBrisanjeTelefonijeForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PotvrdiBrisanjeTelevizijeForma.resx">
+      <DependentUpon>PotvrdiBrisanjeTelevizijeForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PotvrdiBrisanjeUredjaja.resx">
+      <DependentUpon>PotvrdiBrisanjeUredjaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PregledDodatnihPaketaTelevizijeForma.resx">
+      <DependentUpon>PregledDodatnihPaketaTelevizijeForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\TelefonijaForma.resx">
+      <DependentUpon>TelefonijaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\TelevizijaForma.resx">
+      <DependentUpon>TelevizijaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Uredjaji.resx">
+      <DependentUpon>Uredjaji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Usluga.resx">
+      <DependentUpon>Usluga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ZaPromenuKomCvora.resx">
+      <DependentUpon>ZaPromenuKomCvora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ZaPromenuStanice.resx">
+      <DependentUpon>ZaPromenuStanice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.Form1.resources" />
+    <EmbeddedResource Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.Forme.DetaljiOFizickomLicu.resources" />
+    <EmbeddedResource Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.Forme.DetaljiOPravnomLicu.resources" />
+    <EmbeddedResource Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.Forme.DetaljiOUredjajuGS.resources" />
+    <EmbeddedResource Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.Forme.DetaljiOUredjajuHub.resources" />
+    <EmbeddedResource Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.Forme.DetaljiOUredjajuKomCvor.resources" />
+    <EmbeddedResource Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.Forme.DodajKorisnika.resources" />
+    <EmbeddedResource Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.Forme.DodajUredjaj.resources" />
+    <EmbeddedResource Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.Forme.IzmeniKorisnikaFizickoLice.resources" />
+    <EmbeddedResource Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.Forme.IzmeniKorisnikaPravnoLice.resources" />
+    <EmbeddedResource Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.Forme.IzmeniUredjajGlavnaStanica.resources" />
+    <EmbeddedResource Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.Forme.IzmeniUredjajHub.resources" />
+    <EmbeddedResource Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.Forme.IzmeniUredjajKomunikacioniCvor.resources" />
+    <EmbeddedResource Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.Forme.Korisnici.resources" />
+    <EmbeddedResource Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.Forme.Pocetna.resources" />
+    <EmbeddedResource Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.Forme.PotvrdiBrisanjeKorisnika.resources" />
+    <EmbeddedResource Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.Forme.PotvrdiBrisanjeUredjaja.resources" />
+    <EmbeddedResource Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.Forme.Uredjaji.resources" />
+    <EmbeddedResource Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.Forme.Usluga.resources" />
+    <EmbeddedResource Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.Forme.ZaPromenuKomCvora.resources" />
+    <EmbeddedResource Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.Forme.ZaPromenuStanice.resources" />
+    <EmbeddedResource Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.Properties.Resources.resources" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="bin\Debug\Telekomunikaciona_Kompanija_NHibernate.exe.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.csproj.CopyComplete" />
+    <None Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.csproj.SuggestedBindingRedirects.cache" />
+    <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oracle.ManagedDataAccess.Client.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Antlr3.Runtime.dll" />
+    <Content Include="bin\Debug\Antlr3.Runtime.xml" />
+    <Content Include="bin\Debug\FluentNHibernate.dll" />
+    <Content Include="bin\Debug\FluentNHibernate.pdb" />
+    <Content Include="bin\Debug\FluentNHibernate.xml" />
+    <Content Include="bin\Debug\Iesi.Collections.dll" />
+    <Content Include="bin\Debug\Iesi.Collections.xml" />
+    <Content Include="bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll" />
+    <Content Include="bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml" />
+    <Content Include="bin\Debug\NHibernate.dll" />
+    <Content Include="bin\Debug\NHibernate.xml" />
+    <Content Include="bin\Debug\Oracle.ManagedDataAccess.dll" />
+    <Content Include="bin\Debug\Remotion.Linq.dll" />
+    <Content Include="bin\Debug\Remotion.Linq.EagerFetching.dll" />
+    <Content Include="bin\Debug\Remotion.Linq.EagerFetching.xml" />
+    <Content Include="bin\Debug\Remotion.Linq.xml" />
+    <Content Include="bin\Debug\System.Buffers.dll" />
+    <Content Include="bin\Debug\System.Buffers.xml" />
+    <Content Include="bin\Debug\System.Memory.dll" />
+    <Content Include="bin\Debug\System.Memory.xml" />
+    <Content Include="bin\Debug\System.Numerics.Vectors.dll" />
+    <Content Include="bin\Debug\System.Numerics.Vectors.xml" />
+    <Content Include="bin\Debug\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="bin\Debug\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="bin\Debug\System.Text.Encodings.Web.dll" />
+    <Content Include="bin\Debug\System.Text.Encodings.Web.xml" />
+    <Content Include="bin\Debug\System.Text.Json.dll" />
+    <Content Include="bin\Debug\System.Text.Json.xml" />
+    <Content Include="bin\Debug\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="bin\Debug\System.Threading.Tasks.Extensions.xml" />
+    <Content Include="bin\Debug\System.ValueTuple.dll" />
+    <Content Include="bin\Debug\System.ValueTuple.xml" />
+    <Content Include="bin\Debug\Telekomunikaciona_Kompanija_NHibernate.exe" />
+    <Content Include="bin\Debug\Telekomunikaciona_Kompanija_NHibernate.pdb" />
+    <Content Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.exe" />
+    <Content Include="obj\Debug\Telekomunikaciona_Kompanija_NHibernate.pdb" />
+    <Content Include="pozadina\3062f7e045792f3cb3fa236339e67dc5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Text.Json.6.0.1\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.1\build\System.Text.Json.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Text.Json.6.0.1\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Text.Json.6.0.1\build\System.Text.Json.targets'))" />
+  </Target>
+</Project>

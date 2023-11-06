@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telekomunikaciona_Kompanija_NHibernate", "Telekomunikaciona_Kompanija_NHibernate\Telekomunikaciona_Kompanija_NHibernate.csproj", "{D8FA37F5-A912-4429-B9C6-49B8BC16CA4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8FA37F5-A912-4429-B9C6-49B8BC16CA4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8FA37F5-A912-4429-B9C6-49B8BC16CA4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8FA37F5-A912-4429-B9C6-49B8BC16CA4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8FA37F5-A912-4429-B9C6-49B8BC16CA4D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D1D9BED9-F1AD-427B-9A87-5D7415EA0FE5}
+	EndGlobalSection
+EndGlobal
